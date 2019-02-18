@@ -3,7 +3,7 @@ body {
 }
 
 body h1 {
-  color: #cd6699;
+  color: #007690;
 }
 
 body p {
@@ -24,8 +24,9 @@ body li {
 }
 
 .titelbild {
-  width: 270px;
+  width: 200px;
   position: fixed;
+  left: 100px;
 }
 
 .content {
@@ -43,7 +44,7 @@ body li {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 20px;
-  background-color: #cd6699;
+  background-color: #f29209;
   border: 1px solid #555;
   border-radius: 7px;
   margin-top: 150px;
@@ -54,7 +55,7 @@ body li {
 }
 
 .navbar a:hover {
-  background: #bb2d73;
+  background: #007690;
   text-decoration: underline;
   border-radius: 15px;
   color: white;
