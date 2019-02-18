@@ -1,0 +1,88 @@
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+body h1 {
+  color: #cd6699;
+}
+
+body p {
+  min-width: 412px;
+  max-width: 700px;
+}
+
+body a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: black;
+  text-align: center;
+  width: 260px;
+}
+
+body li {
+  min-width: 261px;
+}
+
+.titelbild {
+  width: 270px;
+  position: fixed;
+}
+
+.content {
+  margin-left: 350px;
+  margin-right: 120px;
+}
+
+.navbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  background-color: #cd6699;
+  border: 1px solid #555;
+  border-radius: 7px;
+  margin-top: 150px;
+}
+
+.navbar a {
+  border: 1px solid #555;
+}
+
+.navbar a:hover {
+  background: #bb2d73;
+  text-decoration: underline;
+  border-radius: 15px;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.sass_syntax {
+  border-radius: 10px;
+  width: 500px;
+}
+
+.sky {
+  position: fixed;
+  width: 125px;
+  bottom: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  background: #cd6699;
+  padding: 5px 5px 5px 5px;
+  left: 0;
+  border-radius: 50px;
+  margin: 0 0 8px 8px;
+  color: black;
+  opacity: 0.7;
+}
+
+.Link {
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */
