@@ -41,10 +41,19 @@
     <p>Eine relationale Datenbank ist eine Sammlung von Tabellen. In diesen Tabellen sind Datensätze abgespeichert. Ein Datensatz muss eindeutig identifizierbar sein.
         Dies wird mit einem oder mehreren Schlüsseln erreicht. Ein Schlüssel darf sich nie verändern.
     </p>
-    <p>In einem Datensatz sind die eigentlichen Daten vorhanden. Diese Daten können dann mit dem DBMS ausgelesen und verändert werden. Ein Attribut ist einfach die Überschrift einer Spalte dieser Tabelle.</p>
+    <p>In einem Datensatz sind die eigentlichen Daten vorhanden. Diese Daten können dann mit dem DBMS ausgelesen und verändert werden. Ein Attribut ist einfach die Überschrift einer Spalte dieser Tabelle, wobei die Tabelle die Entität ist.</p>
     <img class="sqlimg" src="img/Aufbau Datenbank.PNG" alt="Aufbau Datenbank">
+    <p>In diesem Bild erkennen Sie die Zusammenstellung von einer wirklichen Datenbank.</p>
     <h1 id="Modellieren">Modellieren</h1>
+    <p>Beim Modellieren entwickelt man ein Datenmodell einer Tabelle. Dies soll einen ersten Eindruck verschaffen und die Struktur der Datenbank festlegen.
+        Sie sollten bei der Modellierung auch schon die Primary- und Foreign-Keys angeben.
+    </p>
+    <h2>Datenmodell</h2>
+    <p>Das am häufigsten verwendete Datemodell ist das relationale Datenmodell. Dies wird in der Regel nur bei Datenbanksystemen angewendet.</p>
+    <img class="sqlimg" src="img/datenbankmodellierung.jpg" alt="Datenmodell">
+    <p>Modellieren wird angewandt, wenn Sie noch keine Daten für eine Datenbank haben. Bei gegebenen Daten normalisiert man.</p>
     <h1 id="Normalisieren">Normalisieren</h1>
+    <p>Das Normalisieren beschreibt die Aufteilung von Attributen in mehrere Tabellen, wobei Redundanzen ausgemerzt werden.</p>
     <h1 id="DDL">Data Definition Language</h1>
     <h1 id="DCL">Data Control Language</h1>
     <h1 id="DML">Data Manipulation Language</h1>
