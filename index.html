@@ -32,17 +32,18 @@
     <a href="http://sql.lernenhoch2.de/lernen/" target="_blank"><b>SQL lernen</b></a>
     <a href="http://wwwlgis.informatik.uni-kl.de/extra/game/" target="_blank"><b>Interaktives SQL Spiel</b></a>
     <a href="https://de.wikipedia.org/wiki/SQL" target="_blank"><b>Wikipedia-Eintrag</b></a>
+    <a href="http://www.datenbanken-verstehen.de/" target="_blank"><b>Datenbanken verstehen</b></a>
     <p>Für unsere praktischen Anwendungen benutzen wir Elementary OS. Dies ist ein Linux-System. SQL kann auf jedem Linux-System arbeiten.</p>
     <h1 id="reldb">Relationale Datenbanken</h1>
     <p>Eine relationale Datenbank dient zur elektronischen Datenverwaltung in Computersystemen. Grundlage des Konzeptes relationaler Datenbanken ist die Relation.
         Das zugehörige Datenbankmanagementsystem ist das relationale Datenbankmanagementsystem (RDBMS).
     </p>
-    <img class="sqlimg" src="img/Aufbau Datenbanksystem.PNG" alt="Aufbau Datenbanksystem">
+    <img class="sqlimg" src="img/Aufbau_Datenbanksystem.PNG" alt="Aufbau Datenbanksystem">
     <p>Eine relationale Datenbank ist eine Sammlung von Tabellen. In diesen Tabellen sind Datensätze abgespeichert. Ein Datensatz muss eindeutig identifizierbar sein.
         Dies wird mit einem oder mehreren Schlüsseln erreicht. Ein Schlüssel darf sich nie verändern.
     </p>
     <p>In einem Datensatz sind die eigentlichen Daten vorhanden. Diese Daten können dann mit dem DBMS ausgelesen und verändert werden. Ein Attribut ist einfach die Überschrift einer Spalte dieser Tabelle, wobei die Tabelle die Entität ist.</p>
-    <img class="sqlimg" src="img/Aufbau Datenbank.PNG" alt="Aufbau Datenbank">
+    <img class="sqlimg" src="img/Aufbau_Datenbank.PNG" alt="Aufbau Datenbank">
     <p>In diesem Bild erkennen Sie die Zusammenstellung von einer wirklichen Datenbank.</p>
     <h1 id="Modellieren">Modellieren</h1>
     <p>Beim Modellieren entwickelt man ein Datenmodell einer Tabelle. Dies soll einen ersten Eindruck verschaffen und die Struktur der Datenbank festlegen.
@@ -57,18 +58,20 @@
         Diese werden miteinander verbunden. Das heisst, die Keys werden schon mal gesetzt. 
     </p>
     <p>Bei der Normalisierung helfen uns die Normalformen. Die Normalformen sind einzelne Schritte für die Normalisierung von einer Datenbank.</p>
-    <h1 id="DDL">Data Definition Language</h1>
-    <h1 id="DCL">Data Control Language</h1>
-    <h1 id="DML">Data Manipulation Language</h1>
-    <h1 id="DQL">Data Query Language</h1>
+    <p>Für die einzelnen Normalformen und die dazugehörigen Begriffe verweise ich auf die Seite:<b><a href="http://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/" target="_blank">Datenbanken verstehen</a></b></p>
+    <h1 id="DDL">Data Definition Language (DDL)</h1>
+    <img class="sqlimg" src="img/DDL.PNG" alt="DDL-Syntax">
+    <p>Die Data Definition Language ist eine Datenbanksprache, die verwendet wird, um Datenstrukturen und verwandte Elemente zu beschreiben, zu ändern oder zu entfernen.</p>
+    <p>Für weite Informationen zur Data Definition Language empfehle ich die Seite:<b><a href="https://www.techopedia.com/definition/1175/data-definition-language-ddl">Techopedia</a></b></p>
+    <h1 id="DCL">Data Control Language (DCL)</h1>
+    <h1 id="DML">Data Manipulation Language (DML)</h1>
+    <h1 id="DQL">Data Query Language (DQL)</h1>
     <h1 id="Datentypen">Datentypen</h1>
     <p>Es gibt verschiedene Datentypen, um anzugeben, welche Daten man verwendet.</p>
     <h1 id="Funktionen">Funktionen / Operatoren</h1>
     <h1 id="JOINs">JOINs</h1>
     <footer>
-        <h5 class="sky">
-            Made by Manuel Rahm
-        </h5>
+        <h5 class="sky">Made by Manuel Rahm</h5>
     </footer>
     </div>
 </body>
