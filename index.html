@@ -87,7 +87,56 @@
     <p>Abfragen werden dann mit Select geschrieben, aber um Daten aus mehreren Tabellen abzufragen benutzt man JOINs. Diese werden weiter im Kapitel 'JOINs' erklärt.</p>
     <h1 id="Datentypen">Datentypen</h1>
     <p>Es gibt verschiedene Datentypen, um anzugeben, welche Daten man verwendet.</p>
-    <p></p>
+    <p>Hier eine Liste mit den verschiedenen Datentypen:</p>
+    <h2>Datentypen für Text</h2>
+    <table>
+    <tr>
+        <th>Datentyp</th>
+        <th>Beschreibung</th>
+    </tr>
+    <tr>
+        <td>CHAR(grösse)</td>
+        <td>Kann einen String mit fester Länge beinhalten (Buchstaben, Nummern und spezielle Zeichen)</td>
+    </tr>
+    <tr>
+        <td>VARCHAR(grösse)</td>
+        <td>Kann einen String mit variabler Länge beinhalten (Buchstaben, Nummern und spezielle Zeichen).
+            <br/>Man kann bis zu 255 Zeichen angeben, wenn es mehr sind, dann wird der Datentyp zu TEXT umgewandelt.</td>
+    </tr>
+    <tr>
+        <td>TINYTEXT</td>
+        <td>Für einen String mit maximal 255 Zeichen</td>
+    </tr>
+    <tr>
+        <td>TEXT</td>
+        <td>Für einen String mit maximal 65'535 Zeichen</td>
+    </tr>
+    <tr>
+        <td>BLOB</td>
+        <td>Binary Large Objects. Für bis zu 65'535 bytes Daten</td>
+    </tr>
+    <tr>
+        <td>MEDIUMTEXT</td>
+        <td>Für einen String mit maximal 16'777'215 Zeichen</td>
+    </tr>
+    <tr>
+        <td>MEDIUMBLOB</td>
+        <td>Binary Large Objects. Für bis zu 16'777'215 bytes Daten</td>
+    </tr>
+    <tr>
+        <td>LONGTEXT</td>
+        <td>Für einen String mit maximal 4'294'967'295 Zeichen</td>
+    </tr>
+    <tr>
+        <td>LONGBLOB</td>
+        <td>Binary Large Objects. Für bis zu 4'294'967'295 bytes Daten</td>
+    </tr>
+    <tr>
+        <td>ENUM</td>
+        <td>Lässt Sie eine Liste von möglichen Werten eingeben. Man kann bis zu 65'535 Werte in einer ENUM-Liste eingeben.
+           <br/>Wenn ein Wert eingegeben wird, der nicht in der Liste ist, wird ein leerer Wert eingegeben.</td>
+    </tr>
+    </table>
     <h1 id="Funktionen">Funktionen / Operatoren</h1>
     <h1 id="JOINs">JOINs</h1>
     <footer>
