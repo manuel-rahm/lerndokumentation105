@@ -24,6 +24,14 @@ body li {
   min-width: 261px;
 }
 
+body table {
+  width: 100%;
+}
+
+body table th {
+  text-align: left;
+}
+
 .titelbild {
   width: 200px;
   position: fixed;
