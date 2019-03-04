@@ -132,4 +132,13 @@ body table th {
   margin: 5px;
   background-color: #f29209;
 }
+
+.links a:hover {
+  background-color: #007690;
+  text-decoration: underline;
+  border-radius: 15px;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
 /*# sourceMappingURL=main.css.map */
