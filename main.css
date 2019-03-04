@@ -4,6 +4,8 @@ body {
 
 body h1 {
   color: #007690;
+  border-top: 2px solid;
+  width: 1150px;
 }
 
 body p {

@@ -22,17 +22,13 @@
         <a href="#Datentypen">Datentypen</a>
         <a href="#Funktionen">Funktionen / Operatoren</a>
         <a href="#JOINs">JOINs</a>
+        <a href="#wichtigelinks">Wichtige Links</a>
     </nav>
     <div class="content">
     <h1 id="Einführung">Einführung</h1>
     <p>SQL ist eine Datenbanksprache zur Definition von Datenstrukturen in relationalen Datenbanken sowie zum Bearbeiten (Einfügen, Verändern, Löschen) und Abfragen von darauf basierenden Datenbeständen.
         SQL steht für Structured Query Language.
     </p>
-    <p>Wichtige Links:</p>
-    <a href="http://sql.lernenhoch2.de/lernen/" target="_blank"><b>SQL lernen</b></a>
-    <a href="http://wwwlgis.informatik.uni-kl.de/extra/game/" target="_blank"><b>Interaktives SQL Spiel</b></a>
-    <a href="https://de.wikipedia.org/wiki/SQL" target="_blank"><b>Wikipedia-Eintrag</b></a>
-    <a href="http://www.datenbanken-verstehen.de/" target="_blank"><b>Datenbanken verstehen</b></a>
     <p>Für unsere praktischen Anwendungen benutzen wir Elementary OS. Dies ist ein Linux-System. SQL kann auf jedem Linux-System arbeiten.</p>
     <h1 id="reldb">Relationale Datenbanken</h1>
     <p>Eine relationale Datenbank dient zur elektronischen Datenverwaltung in Computersystemen. Grundlage des Konzeptes relationaler Datenbanken ist die Relation.
@@ -321,12 +317,25 @@
     <p>Ein Beispiel:</p>
     <img class="oper" src="img/oper.PNG" alt="Operationsgebrauch">
     <h1 id="JOINs">JOINs</h1>
+    <p>Um JOINs anzuwenden empfehle ich die Seite:<a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_join1" target="_blank"><b>W3Schools</b></a></p>
     <p>Mit einem JOIN lassen sich mehrere Werte aus verschiedenen Tabellen abfragen. Diese werden dann in einer Tabelle angezeigt, diese wird aber nicht erzeugt und/oder abgespeichert.</p>
     <p>Folgend sehen Sie die unterschiedlichen JOIN-Typen:</p>
     <img class="joinimg" src="img/joins.png" alt="JOINs">
     <h2>Inner JOIN</h2>
     <p>Am häufigsten wird der Inner JOIN gebraucht. Dieser JOIN ist perfekt, um schnell die wichtigsten Informationen zu filtern. Er hebt sich durch minimale Ergebnismenge ab.</p>
     <p>Die Syntax für einen Inner JOIN ist wie folgt aufgebaut:</p>
+    <p><b>SELECT Attribut FROM Tabelle1 JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK</b></p>
+    <h2>Outer JOIN</h2>
+    <p>Die Syntax für einen Outer JOIN ist wie folgt aufgebaut:</p>
+    <p><b>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK</b></p>
+    <h1 id="wichtigelinks">Wichtige Links</h1>
+    <p>Wichtige Links:</p>
+    <a href="http://sql.lernenhoch2.de/lernen/" target="_blank"><b>SQL lernen</b></a>
+    <a href="http://wwwlgis.informatik.uni-kl.de/extra/game/" target="_blank"><b>Interaktives SQL Spiel</b></a>
+    <a href="https://de.wikipedia.org/wiki/SQL" target="_blank"><b>Wikipedia-Eintrag</b></a>
+    <a href="http://www.datenbanken-verstehen.de/" target="_blank"><b>Datenbanken verstehen</b></a>
+    <a href="https://www.w3schools.com/sql/default.asp" target="_blank"><b>W3Schools</b></a>
+    <a  href="http://www.it-infothek.de/sql/index.html" target="_blank"><b>IT-Infothek SQL</b></a>
     <footer>
         <h5 class="sky">Made by Manuel Rahm</h5>
     </footer>
