@@ -211,12 +211,12 @@
     <p>Für die einzelnen SQL-Funktionen verweise ich auf:<a href="http://www.datenbanken-verstehen.de/sql-funktionen/sql-funktionen-uebersicht/" target="_blank"><b>SQL Funktionen Übersicht</b></a></p>
     <h2>Beschreibung Operatoren</h2>
     <p>Operatoren dienen der Verfeinerung von Ergebnissen:</p>
-    <h3>Arithmeische Operatoren</h3>
+    <h3>Arithmetische Operatoren</h3>
     <table>
-    <th>
+    <tr>
         <th>Operator</th>
         <th>Beschreibung</th>
-    </th>
+    </tr>
     <tr>
         <td>+</td>
         <td>Addieren</td>
@@ -239,6 +239,7 @@
     </tr>
     </table>
     <h3>Vergleichs-Operatoren</h3>
+    <table>
     <tr>
         <th>Operator</th>
         <th>Beschreibung</th>
@@ -255,6 +256,50 @@
         <td>&#x3C;</td>
         <td>Kleiner als...</td>
     </tr>
+    <tr>
+        <td>&#x3E;=</td>
+        <td>Grösser als... oder gleich wie...</td>
+    </tr>
+    <tr>
+        <td>&#x3C;=</td>
+        <td>Kleiner als... oder gleich wie...</td>
+    </tr>
+    <tr>
+        <td>&#x3C;&#x3E;</td>
+        <td>Ist nicht gleich wie...</td>
+    </tr>
+    </table>
+    <h3>Logische Operatoren</h3>
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Beschreibung</th>
+        </tr>
+        <tr>
+            <td>ALL</td>
+            <td>WAHR, wenn alle Werte die Bedingung erfüllen</td>
+        </tr>
+        <tr>
+            <td>AND</td>
+            <td>WAHR, wenn alle Bedinungen wahr sind</td>
+        </tr>
+        <tr>
+            <td>ANY</td>
+            <td>WAHR, wenn ein Wert die Bedingung erfüllt</td>
+        </tr>
+        <tr>
+            <td>BETWEEN</td>
+            <td>WAHR, wenn die Werte im angegebenen Bereich liegen</td>
+        </tr>
+        <tr>
+            <td>EXISTS</td>
+            <td>WAHR, wenn ein oder mehrere Werte zurückgegeben werden</td>
+        </tr>
+        <tr>
+            <td>IN</td>
+            <td>Gibt alle Werte im Bereich der Bedinungen an.</td>
+        </tr>
+    </table>
     <p>Mit den arithmetischen Operatoren lassen sich einfache Berechnungen durchführen.</p>
     <p>Die logischen und comparison Operatoren werden am meisten genutzt.</p>
     <p>Ein Beispiel:</p>
