@@ -23,6 +23,7 @@
         <a href="#Funktionen">Funktionen / Operatoren</a>
         <a href="#JOINs">JOINs</a>
         <a href="#wichtigelinks">Wichtige Links</a>
+        <a href="#transactions">Transaktionen</a>
     </nav>
     <div class="content">
     <h1 id="Einführung">Einführung</h1>
@@ -323,11 +324,22 @@
     <img class="joinimg" src="img/joins.png" alt="JOINs">
     <h2>Inner JOIN</h2>
     <p>Am häufigsten wird der Inner JOIN gebraucht. Dieser JOIN ist perfekt, um schnell die wichtigsten Informationen zu filtern. Er hebt sich durch minimale Ergebnismenge ab.</p>
-    <p>Die Syntax für einen Inner JOIN ist wie folgt aufgebaut:</p>
+    <p>Die <b>Syntax</b> für einen Inner JOIN ist wie folgt aufgebaut:</p>
     <p><b>SELECT Attribut FROM Tabelle1 JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK</b></p>
-    <h2>Outer JOIN</h2>
-    <p>Die Syntax für einen Outer JOIN ist wie folgt aufgebaut:</p>
+    <h2>Left/Right Outer JOIN</h2>
     <p><b>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK</b></p>
+    <h2>Left/Right Inner JOIN</h2>
+    <p><b>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK Where Tabelle2.PK IS NULL</b></p>
+    <h2>Full Outer JOIN</h2>
+    <p><b>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON ... Tabelle1.PK = Tabelle2.FK UNION SELECT Attribut FROM Tabelle1 RIGHT JOIN Tabelle2 ON ... Tabelle1.PK = Tabelle2.FK</b></p>
+    <h1 id="transactions">Transaktionen</h1>
+    <p>Mit Transactions kann man sich einen "Savepoint" erstellen. Wenn man einen Fehler macht und dies gern rückgängig machen möchte, sind die Transactions sehr hilfreich.</p>
+    <p>Mit folgenden Befehlen kann man Transactions starten und zu einem Savepoint zurückschalten:</p>
+    <p><b>START TRANSACTION TransactionName</b></p>
+    <p><b>ROLLBACK TO TransactionName</b></p>
+    <p>Alle Änderungen, die nach dem Starten der Transaction vollzogen wurden, sind nach dem Rollback nicht mehr vorhanden.</p>
+    <p>Wenn man eine Transaction nicht mehr braucht und diese schliessen will, geht das wie folgt:</p>
+    <p><b>COMMIT TransactionName</b></p>
     <h1 id="wichtigelinks">Wichtige Links</h1>
     <p>Wichtige Links:</p>
     <a href="http://sql.lernenhoch2.de/lernen/" target="_blank"><b>SQL lernen</b></a>
@@ -335,7 +347,8 @@
     <a href="https://de.wikipedia.org/wiki/SQL" target="_blank"><b>Wikipedia-Eintrag</b></a>
     <a href="http://www.datenbanken-verstehen.de/" target="_blank"><b>Datenbanken verstehen</b></a>
     <a href="https://www.w3schools.com/sql/default.asp" target="_blank"><b>W3Schools</b></a>
-    <a  href="http://www.it-infothek.de/sql/index.html" target="_blank"><b>IT-Infothek SQL</b></a>
+    <a href="http://www.it-infothek.de/sql/index.html" target="_blank"><b>IT-Infothek SQL</b></a>
+    <a href="http://www.ntu.edu.sg/home/ehchua/programming/sql/mysql_beginner.html" target="_blank"><b>MySQL for beginners</b></a>
     <br/>
     <br/>
     <br/>
