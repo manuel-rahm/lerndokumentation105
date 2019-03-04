@@ -119,4 +119,17 @@ body table th {
 .operat {
   font-size: 20px;
 }
+
+.links {
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.links a {
+  border: 2px solid;
+  margin: 5px;
+  background-color: #f29209;
+}
 /*# sourceMappingURL=main.css.map */
