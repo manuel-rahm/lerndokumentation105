@@ -218,15 +218,15 @@
         <th>Beschreibung</th>
     </tr>
     <tr>
-        <td>+</td>
+        <td class="operat">+</td>
         <td>Addieren</td>
     </tr>
     <tr>
-        <td>-</td>
+        <td class="operat">-</td>
         <td>Subtrahieren</td>
     </tr>
     <tr>
-        <td>*</td>
+        <td class="operat">*</td>
         <td>Multiplizieren</td>
     </tr>
     <tr>
@@ -297,7 +297,23 @@
         </tr>
         <tr>
             <td>IN</td>
-            <td>Gibt alle Werte im Bereich der Bedinungen an.</td>
+            <td>WAHR, wenn alle Werte im Bereich der Bedinungen sind</td>
+        </tr>
+        <tr>
+            <td>LIKE</td>
+            <td>WAHR, wenn die Werte dem Muster entsprechen</td>
+        </tr>
+        <tr>
+            <td>NOT</td>
+            <td>Zeigt Werte an, wenn die Bedinung nicht getroffen wurde</td>
+        </tr>
+        <tr>
+            <td>OR</td>
+            <td>WAHR, wenn eine Bedinung zutrifft</td>
+        </tr>
+        <tr>
+            <td>SOME</td>
+            <td>WAHR, wenn ein Wert die Bedinung erfüllt</td>
         </tr>
     </table>
     <p>Mit den arithmetischen Operatoren lassen sich einfache Berechnungen durchführen.</p>
@@ -308,7 +324,7 @@
     <p>Mit einem JOIN lassen sich mehrere Werte aus verschiedenen Tabellen abfragen. Diese werden dann in einer Tabelle angezeigt, diese wird aber nicht erzeugt und/oder abgespeichert.</p>
     <p>Folgend sehen Sie die unterschiedlichen JOIN-Typen:</p>
     <img class="joinimg" src="img/joins.png" alt="JOINs">
-    <p></p>
+    <p>Am häufigsten wird der Inner JOIN gebraucht. Dieser JOIN ist perfekt, um schnell die wichtigsten Informationen zu filtern. Er hebt sich durch minimale Ergebnismenge ab.</p>
     <footer>
         <h5 class="sky">Made by Manuel Rahm</h5>
     </footer>
