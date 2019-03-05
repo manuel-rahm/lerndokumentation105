@@ -83,7 +83,7 @@ body table th:first-child {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 20px;
-  margin-top: 150px;
+  margin-top: 140px;
   border-right: 2px solid;
   border-color: #007690;
   padding-right: 12px;
@@ -204,5 +204,12 @@ body table th:first-child {
 
 .hyperlink {
   color: #6b60ff;
+}
+
+code {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Overpass Mono', monospace;
+  color: #f29209;
 }
 /*# sourceMappingURL=main.css.map */
