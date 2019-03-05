@@ -148,10 +148,12 @@ body table th:first-child {
 }
 
 .links {
-  width: 1000px;
+  width: 1150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .links a {
