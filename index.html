@@ -43,6 +43,8 @@
     <p>In einem Datensatz sind die eigentlichen Daten vorhanden. Diese Daten können dann mit dem DBMS ausgelesen und verändert werden. Ein Attribut ist einfach die Überschrift einer Spalte dieser Tabelle, wobei die Tabelle die Entität ist.</p>
     <img class="sqlimg" src="img/Aufbau_Datenbank.PNG" alt="Aufbau Datenbank">
     <p>In diesem Bild erkennen Sie die Zusammenstellung von einer wirklichen Datenbank.</p>
+    <p>Daten aus einem Text-File in die Datenbank speisen, geht wie folgt:</p>
+    <p><b>LOAD DATA LOCAL INFILE 'Pfad' INTO TABLE tblname fields FIELDS TERMINATED BY ';';</b></p>
     <h1 id="Modellieren">Modellieren</h1>
     <p>Beim Modellieren entwickelt man ein Datenmodell einer Tabelle. Dies soll einen ersten Eindruck verschaffen und die Struktur der Datenbank festlegen.
         Sie sollten bei der Modellierung auch schon die Primary- und Foreign-Keys angeben.
