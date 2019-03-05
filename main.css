@@ -185,6 +185,9 @@ body table th:first-child {
   .content {
     margin-left: 40px;
   }
+  img {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1590px) {
