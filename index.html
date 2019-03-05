@@ -24,6 +24,7 @@
         <a href="#Funktionen">Funktionen / Operatoren</a>
         <a href="#JOINs">JOINs</a>
         <a href="#transactions">Transaktionen</a>
+        <a href="#views">Views</a>
         <a href="#praxis">Praktische Beispiele</a>
         <a href="#wichtigelinks">Wichtige Links</a>
         <a href="#glossar">Glossar</a>
@@ -82,7 +83,10 @@
         <li>Deny</li>
     </ul>
     <p>Die Syntax hierbei sieht dann so aus:</p>
-    <img class="sqlimg" src="img/DCL.PNG" alt="DCL-Syntax">
+    <code>
+        GRANT Operation+ ON Relation TO (PUBLIC|Benutzer) [WITH GRANT OPTION]<br/>
+        REVOKE Operation+ ON Relation FROM (PUBLIC|Benutzer)
+    </code>
     <p>Public spricht alle Personen an, wobei Operation die Berechtigung darstellt.</p>
     <p>Folgende Privilegien können vergeben und entzogen werden: CREATE DATABASE, SELECT, INSERT, UPDATE, DELETE, EXECUTE and CREATE VIEW.</p>
     <p>Mit Grant vergibt man Rechte, mit Revoke entzieht man Rechte und mit Deny verweigert man die Zugriffsrechte.</p>
@@ -91,7 +95,15 @@
     <h1 id="DML">Data Manipulation Language (DML)</h1>
     <p>Mit der Data Manipulation Language können Sie Daten schreiben, lesen, ändern und löschen. Es ist die Datenverarbeitungssprache.</p>
     <p>Folgend sehen Sie die Syntax der DML:</p>
-    <img class="sqlimg" src="img/DML.PNG" alt="DML-Syntax">
+    <code>INSERT INTO Relation [( Attribut+ )] VALUES ( ( Konstante+ ) )+<br/>
+        INSERT INTO Relation [( Attribut+ )] SFW-Block<br/>
+        UPDATE Relation SET (Attribut-Ausdruck)+ [WHERE Where-Klausel]<br/>
+        MERGE INTO Relation USING Quelle ON Join-Klausel<br/>
+        WHEN MATCHED [BY TARGET] INSERT (Attributliste) VALUES (Ausdruckliste)<br/>
+        [WHEN NOT MATCHED BY SOURCE DELETE]<br/>
+        DELETE FROM Relation [WHERE Where-Klausel]<br/>
+        TRUNCATE Relation
+    </code>
     <p>Mit <b>Insert</b> können Sie Datensätze in eine Tabelle einfügen. Mit Update überschreiben Sie vorhandene Daten.
         Delete löscht Daten aus einer Relation. Mit <i>Where</i> gibt man an, welche Daten man löschen will. Ohne das <i>Where</i> werden alle Zeilen aus einer Tabelle entfernt.
     </p>
@@ -341,7 +353,8 @@
     <p>Mit den arithmetischen Operatoren lassen sich einfache Berechnungen durchführen.</p>
     <p>Die logischen und comparison Operatoren werden am meisten genutzt.</p>
     <p>Ein Beispiel:</p>
-    <img class="oper" src="img/oper.PNG" alt="Operationsgebrauch">
+    <code>SELECT * FROM Products<br/>
+        WHERE Price = 18</code>
     <p>Hierbei wird * nicht als Multiplikation genutzt, sondern als Asterisk. Dies ist ein Platzhalter für "Alles"</p>
     <h1 id="JOINs">JOINs</h1>
     <p>Um JOINs anzuwenden empfehle ich die Seite:<a class="hyperlink" href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_join1" target="_blank"><b>W3Schools</b></a></p>
@@ -351,21 +364,22 @@
     <h2>Inner JOIN</h2>
     <p>Am häufigsten wird der Inner JOIN gebraucht. Dieser JOIN ist perfekt, um schnell die wichtigsten Informationen zu filtern. Er hebt sich durch minimale Ergebnismenge ab.</p>
     <p>Die <b>Syntax</b> für einen Inner JOIN ist wie folgt aufgebaut:</p>
-    <p><b>SELECT Attribut FROM Tabelle1 JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK</b></p>
+    <code>SELECT Attribut FROM Tabelle1 JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK</code>
     <h2>Left/Right Outer JOIN</h2>
-    <p><b>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK</b></p>
+    <code>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK</code>
     <h2>Left/Right Inner JOIN</h2>
-    <p><b>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK Where Tabelle2.PK IS NULL</b></p>
+    <code>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.PK = Tabelle2.FK Where Tabelle2.PK IS NULL</code>
     <h2>Full Outer JOIN</h2>
-    <p><b>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON ... Tabelle1.PK = Tabelle2.FK UNION SELECT Attribut FROM Tabelle1 RIGHT JOIN Tabelle2 ON ... Tabelle1.PK = Tabelle2.FK</b></p>
+    <code>SELECT Attribut FROM Tabelle1 LEFT JOIN Tabelle2 ON ... Tabelle1.PK = Tabelle2.FK UNION SELECT Attribut FROM Tabelle1 RIGHT JOIN Tabelle2 ON ... Tabelle1.PK = Tabelle2.FK</code>
     <h1 id="transactions">Transaktionen</h1>
     <p>Mit Transactions kann man sich einen "Savepoint" erstellen. Wenn man einen Fehler macht und dies gern rückgängig machen möchte, sind die Transactions sehr hilfreich.</p>
     <p>Mit folgenden Befehlen kann man Transactions starten und zu einem Savepoint zurückschalten:</p>
-    <p><b>START TRANSACTION TransactionName</b></p>
-    <p><b>ROLLBACK TO TransactionName</b></p>
+    <code>START TRANSACTION TransactionName</code>
+    <code>ROLLBACK TO TransactionName</code>
     <p>Alle Änderungen, die nach dem Starten der Transaction vollzogen wurden, sind nach dem Rollback nicht mehr vorhanden.</p>
     <p>Wenn man eine Transaction nicht mehr braucht und diese schliessen will, geht das wie folgt:</p>
-    <p><b>COMMIT TransactionName</b></p>
+    <code>COMMIT TransactionName</code>
+    <h1 id="views">Views</h1>
     <h1 id="praxis">Praktische Beispiele</h1>
     <h1 id="wichtigelinks">Wichtige Links</h1>
     <div class="links">
