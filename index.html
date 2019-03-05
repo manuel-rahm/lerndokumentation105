@@ -13,6 +13,7 @@
     <nav class="navbar">
         <a href="#Einführung">Einführung</a>
         <a href="#reldb">Relationale Datenbanken</a>
+        <a href="#daten-importieren">Daten Importieren</a>
         <a href="#Modellieren">Modellieren</a>
         <a href="#Normalisieren">Normalisieren</a>
         <a href="#DDL">Data Definition Language</a>
@@ -23,6 +24,7 @@
         <a href="#Funktionen">Funktionen / Operatoren</a>
         <a href="#JOINs">JOINs</a>
         <a href="#transactions">Transaktionen</a>
+        <a href="#praxis">Praktische Beispiele</a>
         <a href="#wichtigelinks">Wichtige Links</a>
         <a href="#glossar">Glossar</a>
     </nav>
@@ -43,8 +45,9 @@
     <p>In einem Datensatz sind die eigentlichen Daten vorhanden. Diese Daten können dann mit dem DBMS ausgelesen und verändert werden. Ein Attribut ist einfach die Überschrift einer Spalte dieser Tabelle, wobei die Tabelle die Entität ist.</p>
     <img class="sqlimg" src="img/Aufbau_Datenbank.PNG" alt="Aufbau Datenbank">
     <p>In diesem Bild erkennen Sie die Zusammenstellung von einer wirklichen Datenbank.</p>
+    <h1 id="daten-importieren">Daten Importieren</h1>
     <p>Daten aus einem Text-File in die Datenbank speisen, geht wie folgt:</p>
-    <p><b>LOAD DATA LOCAL INFILE 'Pfad' INTO TABLE tblname FIELDS TERMINATED BY ';';</b></p>
+    <code>LOAD DATA LOCAL INFILE 'Pfad' INTO TABLE tblname FIELDS TERMINATED BY ';';</code>
     <h1 id="Modellieren">Modellieren</h1>
     <p>Beim Modellieren entwickelt man ein Datenmodell einer Tabelle. Dies soll einen ersten Eindruck verschaffen und die Struktur der Datenbank festlegen.
         Sie sollten bei der Modellierung auch schon die Primary- und Foreign-Keys angeben.
@@ -58,11 +61,19 @@
         Diese werden miteinander verbunden. Das heisst, die Keys werden schon mal gesetzt. 
     </p>
     <p>Bei der Normalisierung helfen uns die Normalformen. Die Normalformen sind einzelne Schritte für die Normalisierung von einer Datenbank.</p>
-    <p>Für die einzelnen Normalformen und die dazugehörigen Begriffe verweise ich auf die Seite:<b><a href="http://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/" target="_blank">Datenbanken verstehen</a></b></p>
+    <p>Für die einzelnen Normalformen und die dazugehörigen Begriffe verweise ich auf die Seite:<b><a class="hyperlink" href="http://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/" target="_blank">Datenbanken verstehen</a></b></p>
     <h1 id="DDL">Data Definition Language (DDL)</h1>
-    <img class="sqlimg" src="img/DDL.PNG" alt="DDL-Syntax">
+    <code>CREATE TABLE Relation ( (Attribut-Definition [PRIMARY KEY])+<br/>
+        [, FOREIGN KEY ( Attribut+ ) REFERENCES Relation ( Attribut+ )] )<br/>
+        DROP TABLE Relation<br/>
+        ALTER TABLE Relation Alter-Definition<br/>
+        CREATE INDEX Index-Name ON Relation ( Attribut+ )<br/>
+        DROP INDEX Index-Name<br/>
+        CREATE VIEW Sicht [( Attribut+ )] AS SFW-Block [WITH CHECK OPTION]<br/>
+        DROP VIEW Sicht
+    </code>
     <p>Die Data Definition Language ist eine Datenbanksprache, die verwendet wird, um Datenstrukturen und verwandte Elemente zu beschreiben, zu ändern oder zu entfernen.</p>
-    <p>Für weitere Informationen zur Data Definition Language empfehle ich die Seite:<b><a href="https://www.techopedia.com/definition/1175/data-definition-language-ddl">Techopedia</a></b></p>
+    <p>Für weitere Informationen zur Data Definition Language empfehle ich die Seite:<b><a class="hyperlink" href="https://www.techopedia.com/definition/1175/data-definition-language-ddl" target="_blank">Techopedia</a></b></p>
     <h1 id="DCL">Data Control Language (DCL)</h1>
     <p>Die Data Control Language wird für die Verwaltung Zugriffsrechten verwendet. Es gibt hauptsächlich drei Befehle für die DCL:</p>
     <ul>
@@ -89,7 +100,7 @@
     <p>Abfragen werden dann mit Select geschrieben, aber um Daten aus mehreren Tabellen abzufragen benutzt man JOINs. Diese werden weiter im Kapitel 'JOINs' erklärt.</p>
     <h1 id="Datentypen">Datentypen</h1>
     <p>Es gibt verschiedene Datentypen, um anzugeben, welche Daten man verwendet.</p>
-    <p>Damit Sie leichter entscheiden können, welchen Datentyp ich für was nehme, gibt es hier eine Übersicht:<a href="datentypen.pdf" target="_blank"><b>Datentypen-Modell</b></a></p>
+    <p>Damit Sie leichter entscheiden können, welchen Datentyp ich für was nehme, gibt es hier eine Übersicht:<a class="hyperlink" href="datentypen.pdf" target="_blank"><b>Datentypen-Modell</b></a></p>
     <p>Hier eine Liste mit den verschiedenen Datentypen. Diese Angaben stimmen nur mit <b>mysql</b> überein:</p>
     <h2>Datentypen für Text</h2>
     <div style="overflow-x:auto;">
@@ -215,7 +226,7 @@
     <h2>Beschreibung Funktionen</h2>
     <p>Mit SQL Aggregat Funktionen, wie z.B. SUM() oder AVG(), können Tabellenspalten auf ihre Werte zusammengefasst und berechnet werden.</p>
     <p>Mit SQL Skalar Funktionen, wie z.B. LEN() oder Round(), liefern Einzelwerte auf Basis ihrer Inputvariable zurück.</p>
-    <p>Für die einzelnen SQL-Funktionen verweise ich auf:<a href="http://www.datenbanken-verstehen.de/sql-funktionen/sql-funktionen-uebersicht/" target="_blank"><b>SQL Funktionen Übersicht</b></a></p>
+    <p>Für die einzelnen SQL-Funktionen verweise ich auf:<a class="hyperlink" href="http://www.datenbanken-verstehen.de/sql-funktionen/sql-funktionen-uebersicht/" target="_blank"><b>SQL Funktionen Übersicht</b></a></p>
     <h2>Beschreibung Operatoren</h2>
     <p>Operatoren dienen der Verfeinerung von Ergebnissen:</p>
     <h3>Arithmetische Operatoren</h3>
@@ -333,7 +344,7 @@
     <img class="oper" src="img/oper.PNG" alt="Operationsgebrauch">
     <p>Hierbei wird * nicht als Multiplikation genutzt, sondern als Asterisk. Dies ist ein Platzhalter für "Alles"</p>
     <h1 id="JOINs">JOINs</h1>
-    <p>Um JOINs anzuwenden empfehle ich die Seite:<a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_join1" target="_blank"><b>W3Schools</b></a></p>
+    <p>Um JOINs anzuwenden empfehle ich die Seite:<a class="hyperlink" href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_join1" target="_blank"><b>W3Schools</b></a></p>
     <p>Mit einem JOIN lassen sich mehrere Werte aus verschiedenen Tabellen abfragen. Diese werden dann in einer Tabelle angezeigt, diese wird aber nicht erzeugt und/oder abgespeichert.</p>
     <p>Folgend sehen Sie die unterschiedlichen JOIN-Typen:</p>
     <img class="joinimg" src="img/joins.png" alt="JOINs">
@@ -355,6 +366,7 @@
     <p>Alle Änderungen, die nach dem Starten der Transaction vollzogen wurden, sind nach dem Rollback nicht mehr vorhanden.</p>
     <p>Wenn man eine Transaction nicht mehr braucht und diese schliessen will, geht das wie folgt:</p>
     <p><b>COMMIT TransactionName</b></p>
+    <h1 id="praxis">Praktische Beispiele</h1>
     <h1 id="wichtigelinks">Wichtige Links</h1>
     <div class="links">
     <a href="http://sql.lernenhoch2.de/lernen/" target="_blank"><b>SQL lernen</b></a>
