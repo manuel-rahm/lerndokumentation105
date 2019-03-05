@@ -188,6 +188,10 @@ body table th:first-child {
   img {
     max-width: 100%;
   }
+  p {
+    max-width: 300px;
+    width: 300px;
+  }
 }
 
 @media (max-width: 1590px) {
