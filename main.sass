@@ -17,10 +17,23 @@ body
         border-radius: 9px
     li 
         min-width: 261px
+    table, th, td 
+        border: 1px solid black
     table
-        width: 100%
+        width: 700px
+        table-layout: fixed
+        border-collapse: collapse
         th
+            padding-top: 12px
+            padding-bottom: 12px
+            background-color: #007690
+            color: white
+        th, td
             text-align: left
+            width: 100px
+            padding: 8px
+        tr:nth-child(even)
+            background-color: #e4e4e4
 .titelbild
     width: 200px
     position: fixed
@@ -92,3 +105,6 @@ body
         border-radius: 15px
         color: white
         transition: 0.2s
+@media only screen and (max-width: 600px)
+    body: 50%
+    

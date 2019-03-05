@@ -26,12 +26,31 @@ body li {
   min-width: 261px;
 }
 
+body table, body th, body td {
+  border: 1px solid black;
+}
+
 body table {
-  width: 100%;
+  width: 700px;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 
 body table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #007690;
+  color: white;
+}
+
+body table th, body table td {
   text-align: left;
+  width: 100px;
+  padding: 8px;
+}
+
+body table tr:nth-child(even) {
+  background-color: #e4e4e4;
 }
 
 .titelbild {
@@ -140,5 +159,9 @@ body table th {
   color: white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+@media only screen and (max-width: 600px) {
+  body: 50%;
 }
 /*# sourceMappingURL=main.css.map */
