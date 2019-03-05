@@ -31,9 +31,9 @@ body table, body th, body td {
 }
 
 body table {
-  width: 700px;
   table-layout: fixed;
   border-collapse: collapse;
+  width: 985px;
 }
 
 body table th {
@@ -43,14 +43,22 @@ body table th {
   color: white;
 }
 
-body table th, body table td {
+body table td {
   text-align: left;
-  width: 100px;
   padding: 8px;
+  width: 700px;
 }
 
 body table tr:nth-child(even) {
   background-color: #e4e4e4;
+}
+
+body table td:first-child {
+  width: 250px;
+}
+
+body table th:first-child {
+  width: 250px;
 }
 
 .titelbild {
