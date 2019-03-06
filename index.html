@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lerndokumentation 105 - SQL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
@@ -53,6 +54,7 @@
     <code>mysql -u root -p test &#x3C; /home/m105/Downloads/w1.sql</code>
     <p>In diesem Beispiel ist 'test' die Datenbank, die schon besteht, '/home/m105/Downloads/' der Pfad und 'w1.sql' ist die SQL-Datei.</p>
     <p>Sobald man diese Datei importiert, wird jeder Befehl in der Datei in MySQL umgesetzt.</p>
+    <a class="hyperlink" href="https://www.youtube.com/watch?v=HYVW5RlM6b0" target="_blank"><b>Video Anleitung</b></a>
     <h1 id="Modellieren">Modellieren</h1>
     <p>Beim Modellieren entwickelt man ein Datenmodell einer Tabelle. Dies soll einen ersten Eindruck verschaffen und die Struktur der Datenbank festlegen.
         Sie sollten bei der Modellierung auch schon die Primary- und Foreign-Keys angeben.
@@ -78,6 +80,7 @@
         DROP VIEW Sicht
     </code>
     <p>Die Data Definition Language ist eine Datenbanksprache, die verwendet wird, um Datenstrukturen und verwandte Elemente zu beschreiben, zu ändern oder zu entfernen.</p>
+    <p><b>Hinweis:</b> Beim Droppen wird keine Bestätigungsmeldung erscheinen. Alles was SIE Droppen wird auch gelöscht.</p>
     <p>Für weitere Informationen zur Data Definition Language empfehle ich die Seite:<b><a class="hyperlink" href="https://www.techopedia.com/definition/1175/data-definition-language-ddl" target="_blank">Techopedia</a></b></p>
     <h1 id="DCL">Data Control Language (DCL)</h1>
     <p>Die Data Control Language wird für die Verwaltung Zugriffsrechten verwendet. Es gibt hauptsächlich drei Befehle für die DCL:</p>
@@ -96,6 +99,7 @@
     <p>Mit Grant vergibt man Rechte, mit Revoke entzieht man Rechte und mit Deny verweigert man die Zugriffsrechte.</p>
     <p>Mit SHOW GRANTS FOR XY können Sie die Rechte eines Benutzers anzeigen lassen.</p>
     <p>Mit CREATE USER XY wird ein Benutzer erstellt. Ein Passwort wird noch, beim Erstellen des Users, mit IDENTIFIED BY 'Password' erstellt.</p>
+    <p>WITH GRANT OPTION berechtigt den Benutzer die Berechtigungen von anderen zu bearbeiten.</p>
     <h1 id="DML">Data Manipulation Language (DML)</h1>
     <p>Mit der Data Manipulation Language können Sie Daten schreiben, lesen, ändern und löschen. Es ist die Datenverarbeitungssprache.</p>
     <p>Folgend sehen Sie die Syntax der DML:</p>
@@ -168,6 +172,10 @@
            <br/>Wenn ein Wert eingegeben wird, der nicht in der Liste ist, wird ein leerer Wert eingegeben.</td>
     </tr>
     </table>
+    <p>CHAR und VARCHAR unterscheiden sich ein wenig. CHAR wird immer die Grösse brauchen, die Sie angeben. Das heisst, dass 
+        z.B. bei 8 Zeichen auch immer 8 gespeichert werden, auch wenn man nur 2 oder 4 braucht. VARCHAR hingegen speichert nur so viele Zeichen, wie gebraucht werden.
+        Es braucht hingegen immer 2 Bytes um anzugeben, wie lange der String sein darf.
+    </p>
 </div>
     <h2>Datentypen für Nummern</h2>
     <div style="overflow-x:auto;">
@@ -243,7 +251,7 @@
     <p>Mit SQL Aggregat Funktionen, wie z.B. SUM() oder AVG(), können Tabellenspalten auf ihre Werte zusammengefasst und berechnet werden.</p>
     <p>Mit SQL Skalar Funktionen, wie z.B. LEN() oder Round(), liefern Einzelwerte auf Basis ihrer Inputvariable zurück.</p>
     <p>Für die einzelnen SQL-Funktionen verweise ich auf:<a class="hyperlink" href="http://www.datenbanken-verstehen.de/sql-funktionen/sql-funktionen-uebersicht/" target="_blank"><b>SQL Funktionen Übersicht</b></a></p>
-    <p>Hier geht es den Date-Functions:<a class="hyperlink" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html" target="_blank"><b>Datumsfunktionen</b></a></p>
+    <p>Hier geht es zu den Date-Functions:<a class="hyperlink" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html" target="_blank"><b>Datumsfunktionen</b></a></p>
     <h2>Beschreibung Operatoren</h2>
     <p>Operatoren dienen der Verfeinerung von Ergebnissen:</p>
     <h3>Arithmetische Operatoren</h3>
