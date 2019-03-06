@@ -49,9 +49,10 @@
     <h1 id="daten-importieren">Daten Importieren</h1>
     <p>Daten aus einem Text-File in die Datenbank speisen, geht wie folgt:</p>
     <code>LOAD DATA LOCAL INFILE 'Pfad' INTO TABLE tblname FIELDS TERMINATED BY ';';</code>
-    <p>Daten können auch aus einer SQL-Datei importiert werden. Dies erfolgt über die Befehle, die in der SQL-Datei enthalten sind.
-        Die Befehle führt man mit SQL aus und die Datenbank/Tabelle sollten erstellt sein.
-    </p>
+    <p>Daten können auch aus einer SQL-Datei importiert werden. Dies erfolgt über das Terminal.</p>
+    <code>mysql -u root -p test &#x3C; /home/m105/Downloads/w1.sql</code>
+    <p>In diesem Beispiel ist 'test' die Datenbank, die schon besteht, '/home/m105/Downloads/' der Pfad und 'w1.sql' ist die SQL-Datei.</p>
+    <p>Sobald man diese Datei importiert, wird jeder Befehl in der Datei in MySQL umgesetzt.</p>
     <h1 id="Modellieren">Modellieren</h1>
     <p>Beim Modellieren entwickelt man ein Datenmodell einer Tabelle. Dies soll einen ersten Eindruck verschaffen und die Struktur der Datenbank festlegen.
         Sie sollten bei der Modellierung auch schon die Primary- und Foreign-Keys angeben.
