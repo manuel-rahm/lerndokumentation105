@@ -428,8 +428,12 @@
     <p>Wir wollen eine Datenbank mit einer Tabelle:</p>
     <p>Die Namensgebung hierbei spielt an sich keine Rolle.</p>
     <code>CREATE DATABASE dbTest;<br/>
-        CREATE TABLE tblOne(Column1 Char(5), Column2 int);
-    </code>
+        CREATE TABLE tblOne(Column1 Char(5), Column2 int);</code>
+    <p>Nun fügen wir Daten ein (Beachten Sie die Datentypen!):</p>
+    <code>INSERT INTO tblOne
+            (Column1, Column2)
+            VALUES
+            ('asdfg', '22222');</code>
     <h1 id="wichtigelinks">Wichtige Links</h1>
     <div class="links">
     <a href="http://sql.lernenhoch2.de/lernen/" target="_blank"><b>SQL lernen</b></a>
