@@ -215,4 +215,8 @@ code {
   font-family: 'Overpass Mono', monospace;
   color: #f29209;
 }
+
+* {
+  scroll-behavior: smooth;
+}
 /*# sourceMappingURL=main.css.map */
