@@ -115,11 +115,24 @@
     <p>Mit <b>Insert</b> können Sie Datensätze in eine Tabelle einfügen. Mit Update überschreiben Sie vorhandene Daten.
         Delete löscht Daten aus einer Relation. Mit <i>Where</i> gibt man an, welche Daten man löschen will. Ohne das <i>Where</i> werden alle Zeilen aus einer Tabelle entfernt.
     </p>
+    <p>Sie können auch Daten aus einer anderen Tabelle einfügen.</p>
+    <code>INSERT INTO table_a (col1a, col2a, col3a, …)<br/>
+            SELECT col1b, col2b, col3b, …<br/>
+            FROM table_b<br/>
+            WHERE table_b.col1 = x;</code>
     <h1 id="DQL">Data Query Language (DQL)</h1>
     <p>Diese Sprache befasst sich mit Abfragen. DQL besteht hauptsächlich aus <b>Select</b>-Befehlen</p>
     <p>Abfragen werden dann mit Select geschrieben, aber um Daten aus mehreren Tabellen abzufragen benutzt man JOINs. Diese werden weiter im Kapitel 'JOINs' erklärt.</p>
-    <code>SELECT Attribut(e)
-            FROM Tabelle;</code>
+    <code>SELECT<br/>
+            [rechenoperation|funktionsauswahl]<br/>
+          spaltenname<br/>
+          FROM tabelle<br/>
+            [WHERE bedinungen]<br/>
+            [GROUP BY spalten]<br/>
+            [HAVING aggregatfunktionen]<br/>
+            [ORDER BY spalte [ASC] [DESC]<br/>
+            [LIMIT [Anfang][Zeilenanzahl]]
+    </code>
     <h1 id="Datentypen">Datentypen</h1>
     <p>Es gibt verschiedene Datentypen, um anzugeben, welche Daten man verwendet.</p>
     <p>Damit Sie leichter entscheiden können, welchen Datentyp ich für was nehme, gibt es hier eine Übersicht:<a class="hyperlink" href="datentypen.pdf" target="_blank"><b>Datentypen-Modell</b></a></p>
@@ -395,6 +408,20 @@
     <p>Wenn man eine Transaction nicht mehr braucht und diese schliessen will, geht das wie folgt:</p>
     <code>COMMIT TransactionName</code>
     <h1 id="views">Views</h1>
+    <p>Views sind virtuelle Tabellen. Diese Views sind Tabellen für Zwischenresultate oder eine einfache Übersicht aus mehreren Tabellen und werden mit SELECT oder CREATE VIEW generiert.<br/>
+    Sie lassen sich zudem abspeichern und wieder hervorrufen.</p>
+    <code> CREATE VIEW SoftwareVerkaeufe AS<br/>
+            SELECT v.kaeufer, v.verkaeufer<br/>
+            FROM   produkte p, verkaeufe v<br/>
+            WHERE  p.produkt_id = v.produkt_id <br/>
+               AND p.produkt = "Software"</code>
+               <br/><br/>
+    <code>SELECT SoftwareVerkaeufe AS<br/>
+            SELECT v.kaeufer, v.verkaeufer<br/>
+            FROM   produkte p, verkaeufe v<br/>
+            WHERE  p.produkt_id = v.produkt_id<br/>
+               AND p.produkt = "Software"</code>
+    <p>Für weitere Theorie zu Views, ist folgende Seite praktisch:<a href="https://www.tutorialspoint.com/sql/sql-using-views.htm" target="_blank"><b>SQL Views</b></a></p>
     <h1 id="praxis">Praktische Beispiele</h1>
     <h1 id="wichtigelinks">Wichtige Links</h1>
     <div class="links">
