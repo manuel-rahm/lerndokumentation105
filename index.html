@@ -463,6 +463,7 @@
     <p>Fabiotter will einen Benutzer für sich selbst haben und das Passwort soll 123 sein:</p>
     <code>CREATE USER Fabiotter IDENTIFIED by '123';</code>
     <p>Nun braucht meine Mutter einen Benutzer, damit sie eintragen kann, wann es jeweils Abendessen gibt (Soll auch Rechte für tblOne verwalten können):</p>
+    <code>CREATE USER Mutter IDENTIFIED by 'momisagod';<br/>GRANT ALL ON tblOne TO Mutter;</code>
     <h2>JOINs und Abfragen aus mehreren Tabellen:</h2>
     <a class="hyperlink" href="lots.pdf" target="_blank"><b>Aufgaben JOINs</b></a>
     <br/>
