@@ -78,17 +78,18 @@
         CREATE INDEX Index-Name ON Relation ( Attribut+ )<br/>
         DROP INDEX Index-Name<br/>
         CREATE VIEW Sicht [( Attribut+ )] AS SFW-Block [WITH CHECK OPTION]<br/>
-        DROP VIEW Sicht
+        DROP VIEW Sicht<br/>
+        TRUNCATE TABLE table_name;
     </code>
     <p>Die Data Definition Language ist eine Datenbanksprache, die verwendet wird, um Datenstrukturen und verwandte Elemente zu beschreiben, zu ändern oder zu entfernen.</p>
     <p><b>Hinweis:</b> Beim Droppen wird keine Bestätigungsmeldung erscheinen. Alles was SIE Droppen wird auch gelöscht.</p>
+    <p> TRUNCATE wird benutzt um alle Daten von einer Tabelle zu löschen. Dies ist schneller als DELETE zu benutzen.</p>
     <p>Für weitere Informationen zur Data Definition Language empfehle ich die Seite:<b><a class="hyperlink" href="https://www.techopedia.com/definition/1175/data-definition-language-ddl" target="_blank">Techopedia</a></b></p>
     <h1 id="DCL">Data Control Language (DCL)</h1>
-    <p>Die Data Control Language wird für die Verwaltung Zugriffsrechten verwendet. Es gibt hauptsächlich drei Befehle für die DCL:</p>
+    <p>Die Data Control Language wird für die Verwaltung Zugriffsrechten verwendet. Es gibt hauptsächlich zwei Befehle für die DCL:</p>
     <ul>
         <li>Grant</li>
         <li>Revoke</li>
-        <li>Deny</li>
     </ul>
     <p>Die Syntax hierbei sieht dann so aus:</p>
     <code>
@@ -97,7 +98,7 @@
     </code>
     <p>Public spricht alle Personen an, wobei Operation die Berechtigung darstellt.</p>
     <p>Folgende Privilegien können vergeben und entzogen werden: CREATE DATABASE, SELECT, INSERT, UPDATE, DELETE, EXECUTE and CREATE VIEW.</p>
-    <p>Mit Grant vergibt man Rechte, mit Revoke entzieht man Rechte und mit Deny verweigert man die Zugriffsrechte.</p>
+    <p>Mit Grant vergibt man Rechte, mit Revoke entzieht man Rechte.</p>
     <p>Mit SHOW GRANTS FOR XY können Sie die Rechte eines Benutzers anzeigen lassen.</p>
     <p>Mit CREATE USER XY wird ein Benutzer erstellt. Ein Passwort wird noch, beim Erstellen des Users, mit IDENTIFIED BY 'Password' erstellt.</p>
     <p>WITH GRANT OPTION berechtigt den Benutzer die Berechtigungen von anderen zu bearbeiten.</p>
