@@ -418,11 +418,11 @@
     <h1 id="transactions">Transaktionen</h1>
     <p>Mit Transactions kann man sich einen "Savepoint" erstellen. Wenn man einen Fehler macht und dies gern rückgängig machen möchte, sind die Transactions sehr hilfreich.</p>
     <p>Mit folgenden Befehlen kann man Transactions starten und zu einem Savepoint zurückschalten:</p>
-    <code>START TRANSACTION TransactionName</code>
+    <code>START TRANSACTION TransactionName</code><br/>
     <code>ROLLBACK TO TransactionName</code>
     <p>Alle Änderungen, die nach dem Starten der Transaction vollzogen wurden, sind nach dem Rollback nicht mehr vorhanden.</p>
     <p>Wenn man eine Transaction nicht mehr braucht und diese schliessen will, geht das wie folgt:</p>
-    <code>COMMIT TransactionName</code>
+    <code>RELEASE SAVEPOINT TransactionName</code>
     <h1 id="views">Views</h1>
     <p>Views sind virtuelle Tabellen. Diese Views sind Tabellen für Zwischenresultate oder eine einfache Übersicht aus mehreren Tabellen und werden mit SELECT oder CREATE VIEW generiert.<br/>
     Sie lassen sich zudem abspeichern und wieder hervorrufen.</p>
@@ -450,6 +450,10 @@
             (Column1, Column2)
             VALUES
             ('asdfg', '22222');</code>
+    <p>Wir wollen nun die Werte ändern, da wir sie falsch eingegeben haben:</p>
+    <code>UPDATE tblOne SET Column1 = 'Fabio', Column2 = '1';</code>
+    <p>Der ganze Name hat keinen Platz, darum ändern wir den Datentyp von Column1:</p>
+    <code>ALTER TABLE tblOne MODIFY Column1 varchar(50);</code>
     <p>Nun löschen wir die Tabelle:</p>
     <code>drop table TblOne;</code>
     <p>Die Datenbank selbst löschen wir auch gleich wieder:</p>
